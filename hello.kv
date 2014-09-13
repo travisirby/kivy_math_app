@@ -1,0 +1,14 @@
+# File name: hello.kv
+#:kivy 1.8.0
+
+<MyButton@Button>
+    color: .5, .2, .5, .5
+
+<MyWidget>:
+    MyButton:
+        text: 'Howdy Kivy!'
+
+    MyButton:
+        text: 'button 2'
+        pos:   root.right /2 - self.width /2, root.top /2 - self.height /2
+        size: root.right, root.top
