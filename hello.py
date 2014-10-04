@@ -3,27 +3,33 @@
 from __future__ import division
 from kivy.app import App
 from kivy.uix.widget import Widget
+from kivy.clock import Clock
 
 from sympy import *
 from random import randint
 
-
 class MyWidget(Widget):
 
-    str = " True"
-    a = 0
+    randomNumber = 0
 
-    def generateQuestion(self):
+    def generateQuestion(self,dt=None):
         x = symbols('x')
-        self.a = randint(1,30)
-        #return str(self.a**2)+str(x+self.a)
-        return "2x = 5"
+        self.randomNumber = randint(1,30)
+        self.ids.answerLabel.text = ''
+        self.ids.input.text = ''
+        if dt != None:  # Skip if dt is None because this is called at start of app by input in kv
+            self.ids.questionLabel.text = str(self.randomNumber**2) + "x = " + str(self.randomNumber)
+            return
+        return str(self.randomNumber**2) + "x = " + str(self.randomNumber)
+
 
     def entered(self, value):
         x = symbols('x')
-        ans = solve(Eq(2*x,5))
-        self.ids.answerLabel.text = str(Eq(ans[0],sympify(value)))
-        print(value)
+        answer = solve(Eq(self.randomNumber**2*x,self.randomNumber))
+        checkAnswer = Eq(answer[0],sympify(value))
+        self.ids.answerLabel.text = str(checkAnswer)
+        if checkAnswer:
+            Clock.schedule_once(self.generateQuestion, 3)
 
 
 class HelloApp(App):
