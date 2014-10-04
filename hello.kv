@@ -5,22 +5,30 @@
     color: 1,1,1,1
     background_color: 1,1,1,.5
 
+<MyLabel@Label>
+    font_size: '50sp'
+
+
 <MyWidget>:
 
     TextInput:
         id: txtInput1
-        text: 'Hello'
         pos: root.right /2 - self.width /2, self.height
         multiline: False
         size: 300,100
         font_size: '50sp'
         on_text_validate: root.entered(self.text)
 
-    MyButton:
-        id: button1
-        text: 'button 1'
+    MyLabel:
+        id: question
+        text: root.generateQuestion()
         pos:   root.right /2 - self.width /2, root.top - self.height
         size: root.right, 100
         #on_touch_down: root.change_txt_back()
         #on_release: root.random_eq()
-        font_size: '50sp'
+
+    MyLabel:
+        id: answerLabel
+        pos:   root.right /2 - self.width /2, root.top /2 - self.height /2
+
+

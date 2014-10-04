@@ -1,43 +1,30 @@
-__author__ = 'travis'
+# __author__ = 'travis'
 
-import kivy
-import sympy
-
+from __future__ import division
 from kivy.app import App
 from kivy.uix.widget import Widget
-from kivy.properties import ObjectProperty
-from kivy.uix.textinput import TextInput
 
 from sympy import *
 from random import randint
+
 
 class MyWidget(Widget):
 
     str = " True"
     a = 0
 
-    def entered(self, value):
-        print(value)
-
-
-    def random_eq(self):
+    def generateQuestion(self):
         x = symbols('x')
         self.a = randint(1,30)
-        self.ids.button1.text = str(self.a**2)+str(x+self.a)
+        #return str(self.a**2)+str(x+self.a)
+        return "2x = 5"
 
-
-    def change_txt(self):
+    def entered(self, value):
         x = symbols('x')
-        #button_txt = simplify(diff(sin(x), x)
-        if simplify(diff(sin(x), x) - (-cos(x))) == 0:
-            self.ids.button1.text = self.str
-        #self.ids.button1.background_color = 1,1,1,1
+        ans = solve(Eq(2*x,5))
+        self.ids.answerLabel.text = str(Eq(ans[0],sympify(value)))
+        print(value)
 
-    def change_txt_back(self):
-        x = symbols('x')
-        button_txt = integrate(cos(x), x)
-        self.ids.button1.text = 'x = ' + str(solve(self.a**2*x+self.a,x)).translate(None,"[]")
-        #self.ids.button1.background_color = 1,1,1,0
 
 class HelloApp(App):
 
@@ -47,3 +34,8 @@ class HelloApp(App):
 
 if __name__ == '__main__':
     HelloApp().run()
+
+# how to strip: [ ]
+#s+ string.translate(None,"[]")
+
+# sympy fractions: use S(1)/2 or Rational(1,2)
