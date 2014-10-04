@@ -2,13 +2,25 @@
 #:kivy 1.8.0
 
 <MyButton@Button>
-    color: .5, .2, .5, .5
+    color: 1,1,1,1
+    background_color: 1,1,1,.5
 
 <MyWidget>:
-    MyButton:
-        text: 'Howdy Kivy!'
+
+    TextInput:
+        id: txtInput1
+        text: 'Hello'
+        pos: root.right /2 - self.width /2, self.height
+        multiline: False
+        size: 300,100
+        font_size: '50sp'
+        on_text_validate: root.entered(self.text)
 
     MyButton:
-        text: 'button 2'
-        pos:   root.right /2 - self.width /2, root.top /2 - self.height /2
-        size: root.right, root.top
+        id: button1
+        text: 'button 1'
+        pos:   root.right /2 - self.width /2, root.top - self.height
+        size: root.right, 100
+        #on_touch_down: root.change_txt_back()
+        #on_release: root.random_eq()
+        font_size: '50sp'
