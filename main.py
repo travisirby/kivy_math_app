@@ -2,6 +2,7 @@
 
 from kivy.app import App
 from kivy.uix.widget import Widget
+from kivy.uix.floatlayout import FloatLayout
 from kivy.clock import Clock
 
 from levels import Levels
@@ -69,10 +70,33 @@ class MyWidget(Widget):
             print "failed to compare checkAnswer"
 
 
+class TitleWidget(Widget):
+    pass
+
+
+class UserInterface():
+    __rootWidget = None
+
+    def __init__(self, currentRootWidget):
+        self.__rootWidget = currentRootWidget
+
+    def changeto_questions_widget(self,dt):
+        self.__rootWidget.clear_widgets()
+        self.__rootWidget.add_widget(MyWidget())
+
+
+    def add_title_widget(self):
+        self.__rootWidget.add_widget(TitleWidget())
+        Clock.schedule_once(self.changeto_questions_widget, 3)
+
 class MainApp(App):
 
     def build(self):
-        return MyWidget()
+        rootForm = FloatLayout()
+        ui = UserInterface(rootForm)
+        ui.add_title_widget()
+        return rootForm
+
 
 if __name__ == '__main__':
     MainApp().run()

@@ -10,7 +10,6 @@
 
 
 <MyWidget>:
-
     TextInput:
         id: input
         pos: root.right /2 - self.width /2, self.height
@@ -30,4 +29,10 @@
         id: answerLabel
         pos:   root.right /2 - self.width /2, root.top /2 - self.height /2
 
-
+<TitleWidget>:
+    Label:
+        id: mainTitle
+        text: "Algebra App"
+        pos:   root.right /2 - self.width /2, root.top /2 - self.height /2
+        size: root.right, 200
+        font_size: '150sp'
