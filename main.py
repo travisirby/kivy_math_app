@@ -71,30 +71,24 @@ class MyWidget(Widget):
 
 
 class TitleWidget(Widget):
-    pass
+   pass
 
 
-class UserInterface():
-    __rootWidget = None
+class MyLayout(FloatLayout):
 
-    def __init__(self, currentRootWidget):
-        self.__rootWidget = currentRootWidget
+    def on_start(self):
+        self.add_widget(TitleWidget())
 
-    def changeto_questions_widget(self,dt):
-        self.__rootWidget.clear_widgets()
-        self.__rootWidget.add_widget(MyWidget())
+    def goto_questions(self,dt=None):
+        self.clear_widgets()
+        self.add_widget(MyWidget())
 
-
-    def add_title_widget(self):
-        self.__rootWidget.add_widget(TitleWidget())
-        Clock.schedule_once(self.changeto_questions_widget, 3)
 
 class MainApp(App):
 
     def build(self):
-        rootForm = FloatLayout()
-        ui = UserInterface(rootForm)
-        ui.add_title_widget()
+        rootForm = MyLayout()
+        rootForm.on_start()
         return rootForm
 
 

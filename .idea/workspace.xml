@@ -16,7 +16,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/kivyPycharm1$hello.coverage" NAME="hello Coverage Results" MODIFIED="1412702252596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/kivyPycharm1$hello.coverage" NAME="hello Coverage Results" MODIFIED="1412704208461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -30,21 +30,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.kv" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.kv" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.kv">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.013513514" vertical-offset="142" max-vertical-offset="660">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750">
               <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="1710">
-              <caret line="82" column="41" selection-start-line="82" selection-start-column="41" selection-end-line="82" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.46332046" vertical-offset="990" max-vertical-offset="1620">
+              <caret line="82" column="28" selection-start-line="82" selection-start-column="28" selection-end-line="82" selection-end-column="28" />
               <folding>
                 <element signature="e#25#49#0" expanded="true" />
               </folding>
@@ -99,8 +99,8 @@
         <option value="$PROJECT_DIR$/levels.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/app_utils.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/main.kv" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -398,7 +398,11 @@
       <created>1412696656396</created>
       <updated>1412696656396</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added simple screen changing (clearing and adding titlewidget and questionswidget)">
+      <created>1412702299903</created>
+      <updated>1412702299903</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -447,7 +451,8 @@
     <MESSAGE value="now generates a new question after answering last question correctly" />
     <MESSAGE value="added basic user input validation and testing new sympy solve() and Eq() method" />
     <MESSAGE value="breaking up logic into multiple files. levels.py will construct questions based on difficulty" />
-    <option name="LAST_COMMIT_MESSAGE" value="breaking up logic into multiple files. levels.py will construct questions based on difficulty" />
+    <MESSAGE value="Added simple screen changing (clearing and adding titlewidget and questionswidget)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added simple screen changing (clearing and adding titlewidget and questionswidget)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -509,18 +514,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/levels.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Python_Projects/kivy2/lib/python2.7/site-packages/kivy/uix/floatlayout.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.0521235" vertical-offset="1165" max-vertical-offset="1950">
           <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levels.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -533,21 +538,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/main.kv">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="1710">
-          <caret line="82" column="41" selection-start-line="82" selection-start-column="41" selection-end-line="82" selection-end-column="41" />
-          <folding>
-            <element signature="e#25#49#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.kv">
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.013513514" vertical-offset="142" max-vertical-offset="660">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.46332046" vertical-offset="990" max-vertical-offset="1620">
+          <caret line="82" column="28" selection-start-line="82" selection-start-column="28" selection-end-line="82" selection-end-column="28" />
+          <folding>
+            <element signature="e#25#49#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

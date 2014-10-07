@@ -36,3 +36,9 @@
         pos:   root.right /2 - self.width /2, root.top /2 - self.height /2
         size: root.right, 200
         font_size: '150sp'
+
+    MyButton:
+        id: startButton
+        text: "Start"
+        pos: root.right /2, self.height
+        on_press: root.parent.goto_questions()
