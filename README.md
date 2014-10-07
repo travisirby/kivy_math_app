@@ -1,4 +1,4 @@
-kivy_Packt_Projs
+kivy Algebra App
 ================
 
-Kivy Projects from Packt book: Kivy - Interactive Applications in Python
+An mobile app that teaches algebra using sympy CAS.
